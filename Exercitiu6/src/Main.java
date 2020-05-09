@@ -112,7 +112,7 @@ public class Main {
 
             } else if (optiune == 3) {
                 System.out.println("S-a ales optiunea radical");
-                System.out.println("Rezultatul radicalului este " + calculatorStiintifin.radicalDinNumar(primulNumar) + " si " + calculatorStiintifin.radicalDinNumar(alDoileaNumar));
+                System.out.println("Rezultatul radicalul celor 2 numere este :67 " + calculatorStiintifin.radicalDinNumar(primulNumar) + " si " + calculatorStiintifin.radicalDinNumar(alDoileaNumar));
 
             } else if (optiune == 4) {
                 System.out.println("S-a aleas optiunea scadere");
