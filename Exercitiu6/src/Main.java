@@ -68,15 +68,62 @@ public class Main {
         System.out.println("Rezultatul ridicarii la putere al numerelor :" + primulNumar + " si " + alDoileaNumar + " este : " + ridicarePutere);
 
         System.out.println("Va rugam introduceti numarul pentru calcularea radicalului :");
-        primulNumar=scanner1.nextInt();
-        System.out.println("Rezultatul calcularii rezultatului numarului "+primulNumar +" este "+calculatorStiintifin.radicalDinNumar(primulNumar));
+        primulNumar = scanner1.nextInt();
+        System.out.println("Rezultatul calcularii rezultatului numarului " + primulNumar + " este " + calculatorStiintifin.radicalDinNumar(primulNumar));
         System.out.println("Va rugam introduceti numarul pentru calcularea log in baza 10 : ");
-        primulNumar=scanner1.nextInt();
-        System.out.println("Rezultatul calcului logaritmului in baza 10 a numarului "+primulNumar+" este : "+calculatorStiintifin.logaritmBaza10(primulNumar));
-        System.out.println("Va rugam introduceti numarul pentru calcularea logaritmului :" );
-        primulNumar=scanner1.nextInt();
-        System.out.println("Rezultatul calcului logaritmului a numarului "+primulNumar+" este : "+calculatorStiintifin.logaritmNumar(primulNumar));
+        primulNumar = scanner1.nextInt();
+        System.out.println("Rezultatul calcului logaritmului in baza 10 a numarului " + primulNumar + " este : " + calculatorStiintifin.logaritmBaza10(primulNumar));
+        System.out.println("Va rugam introduceti numarul pentru calcularea logaritmului :");
+        primulNumar = scanner1.nextInt();
+        System.out.println("Rezultatul calcului logaritmului a numarului " + primulNumar + " este : " + calculatorStiintifin.logaritmNumar(primulNumar));
 
+        //Sa se introduca 2 numere
+        //Afisam numerele
+        //Sa se afiseze meniul
+        //1.Adunare
+        //2.inmultire
+        //3. Radical
+        //4. Scadere
+        //In functie de operatie sa se realizeze operatia respectiva , daca operatia presupune folosirea unui singru numar,
+        //--facem operatia si pentru al doilea nuamr
+        //Afisam rezultatul
+        int optiune = 0;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Va rugam introduceti cele 2 numere ");
+        primulNumar = sc.nextInt();
+        alDoileaNumar = sc.nextInt();
+        System.out.println("Cele douna numere sunt : " + primulNumar + " si " + alDoileaNumar);
+        System.out.println("Meniu");
+        System.out.println("1.Adunare");
+        System.out.println("2.Inmultire");
+        System.out.println("3.Radical");
+        System.out.println("4.Scadere");
+        System.out.println("Va rugam alegeti o optiune ");
+        optiune = sc.nextInt();
+
+        while (optiune != 9) {//daca utilizatorul introduce orice numar inafara de 9
+            if (optiune == 1) {
+                System.out.println("S-a ales optiunea adunarea");
+                System.out.println("Rezultatul adunarii este : " + calculatorStiintifin.adunbare(primulNumar, alDoileaNumar));
+
+            } else if (optiune == 2) {
+                System.out.println("S-a ales optiunea inmultire");
+                System.out.println("Rezultatul inmultirii este : " + calculatorStiintifin.inmultire(primulNumar, alDoileaNumar));
+
+            } else if (optiune == 3) {
+                System.out.println("S-a ales optiunea radical");
+                System.out.println("Rezultatul radicalului este " + calculatorStiintifin.radicalDinNumar(primulNumar) + " si " + calculatorStiintifin.radicalDinNumar(alDoileaNumar));
+
+            } else if (optiune == 4) {
+                System.out.println("S-a aleas optiunea scadere");
+                System.out.println("Rezultatul scaderii este : " + calculatorStiintifin.scadere(primulNumar, alDoileaNumar));
+
+            } else {
+                System.out.println("Nu gasim optiunea dvs !");
+            }
+            optiune=sc.nextInt();
+        }
+        System.out.println("Ne pare rau , ati apasat tasta 9 am iesit din program . O zi buna ! ");
 
     }
 }
