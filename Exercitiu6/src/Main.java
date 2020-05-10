@@ -121,9 +121,26 @@ public class Main {
             } else {
                 System.out.println("Nu gasim optiunea dvs !");
             }
-            optiune=sc.nextInt();
+            optiune = sc.nextInt();
         }
         System.out.println("Ne pare rau , ati apasat tasta 9 am iesit din program . O zi buna ! ");
-
+        Scanner string = new Scanner(System.in);
+        System.out.println("Va rugam sa introduceti primul string ");
+        String primultString = string.nextLine();
+        System.out.println("Ati intrus : " + primultString);
+        System.out.println("Introduceti al doilea string");
+        String alDoileaStirng = string.nextLine();
+        System.out.println("Ati introdus : " + alDoileaStirng);
+        CalculatorString calculatorString = new CalculatorString();
+        System.out.println("Concantenarea stringurilor este : " + calculatorString.concantenare(primultString, alDoileaStirng));
+        System.out.println("Verificam daca stringul contine un anumit caracter " + calculatorString.contineCaracter(primultString, 'v'));
+        System.out.println("Adunarea celor doua stirnguri este :" + calculatorString.adunareSrting(primultString, alDoileaStirng));
+        System.out.println("Verificam daca lingimea unui string este par " + calculatorString.stringParImpar(primultString));
+        char[] sirCaractere = calculatorString.sirCaractere(primultString);
+        for(int cursor=0;cursor<sirCaractere.length;cursor++){
+            System.out.println("Afisam caracterele stringului :"+sirCaractere[cursor]);
+        }
+        System.out.println("Verificam daca stringul incepe cu o vocala " + calculatorString.vocala(primultString));
+        System.out.println("Numaram spatiile dintr-un string " + calculatorString.spatiiStinrg(primultString));
     }
 }
